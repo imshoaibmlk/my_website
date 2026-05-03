@@ -757,27 +757,115 @@
         .fd-delay-4 { transition-delay: 0.4s; }
 
         /* ---- Mobile ---- */
-        @media (max-width: 768px) {
-            #nav-links {
-                display: none;
-                position: fixed;
-                top: 56px; left: 0; right: 0;
-                background: rgba(248,249,250,0.97);
-                padding: 1rem 2rem 1.5rem;
-                flex-direction: column;
-                gap: 0.6rem;
-                border-bottom: 1px solid rgba(26,26,46,0.08);
-                backdrop-filter: blur(20px);
-            }
-            #nav-links.open { display: flex; }
-            #menu-toggle { display: flex; }
-            .hero-avatar { display: none; }
-            section { padding: 4rem 1.25rem; }
-        }
-    </style>
-</head>
-<body>
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(248,249,250,0.97);
+        padding: 1rem 1.5rem 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-bottom: 1px solid rgba(26,26,46,0.08);
+        backdrop-filter: blur(20px);
+        z-index: 9998;
+    }
+    #nav-links.open { display: flex; }
+    #menu-toggle { display: flex; }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4rem 1.5rem 3rem;
+    }
+    
+    .hero-avatar { 
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+    .avatar-ring-outer { width: 180px; height: 180px; }
+    .avatar-ring-inner { width: 150px; height: 150px; }
+    .avatar-initials { font-size: 3.2rem; }
+    
+    .hero-name { font-size: 2.2rem; }
+    .typing-line { min-height: 1.8rem; }
+    .hero-bio { font-size: 0.9rem; }
+    
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-primary, .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    section { padding: 3.5rem 1.5rem; }
+    
+    .section-title { font-size: 1.5rem; }
+    .about-grid { flex-direction: column; gap: 2rem; }
+    .about-stats { max-width: 100%; }
+    
+    .skills-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    
+    .cert-card { min-width: 260px; }
+    
+    .footer-top { flex-direction: column; gap: 2rem; }
+    .footer-col { min-width: auto; }
+    
+    .social-links { flex-direction: column; width: 100%; }
+    .social-link { font-size: 0.75rem; }
+    
+    .nav-logo { font-size: 1.1rem; }
+}
 
+@media (max-width: 480px) {
+    #navbar { padding: 0.75rem 1rem; }
+    .nav-inner { gap: 0.8rem; }
+    
+    section { padding: 2.5rem 1rem; }
+    .section-wrap { padding: 0; }
+    
+    .hero-content { padding: 3rem 1rem 2rem; }
+    .hero-name { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .hero-eyebrow { font-size: 0.7rem; margin-bottom: 0.75rem; }
+    .typing-line { font-size: 0.9rem; min-height: 1.4rem; }
+    .hero-bio { font-size: 0.85rem; line-height: 1.65; }
+    
+    .section-title { font-size: 1.3rem; margin-bottom: 2rem; }
+    .section-eyebrow { font-size: 0.65rem; }
+    
+    .about-text p { font-size: 0.85rem; line-height: 1.7; }
+    .stat-box { padding: 0.9rem 1rem; }
+    .stat-value { font-size: 1.6rem; }
+    .stat-label { font-size: 0.7rem; }
+    
+    .tl-item { padding-left: 1.75rem; padding-bottom: 2rem; }
+    .tl-dot { width: 11px; height: 11px; top: 4px; }
+    .tl-line { left: 5px; }
+    .tl-title { font-size: 0.95rem; }
+    .tl-school { font-size: 0.8rem; }
+    .tl-desc { font-size: 0.8rem; }
+    .tl-badge { font-size: 0.6rem; padding: 0.2rem 0.6rem; }
+    
+    .skill-cat { padding: 1rem; }
+    .skill-cat-title { font-size: 0.6rem; margin-bottom: 0.7rem; }
+    
+    .proj-desc { font-size: 0.8rem; }
+    .proj-title { font-size: 0.95rem; }
+    
+    .cert-card { min-width: 240px; padding: 1.2rem; }
+    .cert-name { font-size: 0.9rem; }
+    .cert-org { font-size: 0.75rem; }
+    
+    .footer-logo { font-size: 1.5rem; }
+    .footer-tagline { font-size: 0.8rem; }
+    .footer-link { font-size: 0.8rem; }
+    
+    #hero { min-height: auto; padding-top: 64px; }
+}
 <!-- Scroll Progress Bar -->
 <div id="progress-bar"></div>
 
